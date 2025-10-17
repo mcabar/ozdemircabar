@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Blog Yazıları</h1>
+<div id="blog"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+async function loadPosts() {
+  const res = await fetch('posts/ilk-makale.md'); // İlk makale örneği
+  const text = await res.text();
+  document.getElementById('blog').innerHTML = marked.parse(text);
+}
+loadPosts();
+</script>
+
+</body>
+</html>
