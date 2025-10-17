@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Av. Ayşe Bengül Özdemir Cabar</title>
+<link rel="stylesheet" href="style.css">
+<style type="text/css">
+.auto-style1 {
+	font-family: "Trebuchet MS";
+	letter-spacing: 2px;
+}
+.auto-style2 {
+	letter-spacing: 4px;
+}
+.auto-style3 {
+	font-weight: normal;
+}
+.auto-style4 {
+	vertical-align: middle;
+}
+.auto-style5 {
+	border-width: 0px;
+}
+
+/* Hamburger Menü Butonu */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1200;
+}
+
+/* Menü mobilde gizli başlar */
+#menu {
+    transition: max-height 0.3s ease-in-out;
+}
+
+#menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+#menu.active {
+    max-height: 1000px; /* açılınca yeterli yüksekliği ver */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #menu {
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* üst bar altından başlasın */
+        left: 0;
+        z-index: 1100;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    #menu li {
+        margin: 0;
+        text-align: center;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Üst Bar -->
+<div class="top-bar">
+  <div class="logo">
+      <img alt="" height="97" src="logo.jpg" width="442">
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="menu">
+    <ul class="auto-style1">
+      <li class="auto-style4"><a href="#hakkinda" class="auto-style2"><span class="auto-style3">Hakkında</span></a></li>
+      <li class="auto-style4"><a href="#hizmetler" class="auto-style2"><span class="auto-style3">Hizmetler</span></a></li>
+      <li class="auto-style4"><a href="#faaliyet" class="auto-style2"><span class="auto-style3">Faaliyet Alanları</span></a></li>
+      <li class="auto-style4"><a href="#arabuluculuk" class="auto-style2"><span class="auto-style3">Arabuluculuk</span></a></li>
+      <li class="auto-style4"><a href="#iletisim" class="auto-style2"><span class="auto-style3">İletişim</span></a></li>	  
+	  <li class="auto-style4"><a href="https://www.param.com.tr" target="_blank" rel="noopener noreferrer" class="auto-style2"><span class="auto-style3">E-Ödeme</span></a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Hakkında -->
+<section id="hakkinda" class="hakkinda-section">
+  <div class="hakkinda-container">
+    <div class="portrait">
+      <img src="portrait.jpg" alt="Portre">
+    </div>
+    <div class="resume">
+      <div class="isim" style="font-family: 'Trebuchet MS'; font-weight: bold">
+		  <strong>Ayşe Bengül Özdemir Cabar</strong></div>
+      <div class="unvan" style="font-family: 'Trebuchet MS'">Avukat & Arabulucu</div>
+      <div class="aciklama" style="font-family: 'Trebuchet MS'">
+        2008 yılında Marmara Üniversitesi Hukuk Fakültesinden mezun olmuş, 2010 yılı Ocak ayında İstanbul Barosu’na kaydolarak avukatlık mesleğine başlamıştır. Uzun yıllar İstanbul’da yoğun çalışma temposu içerisinde özel hukukun birçok alanında bilgi ve deneyim kazanmıştır. 2020 yılından bu yana Antalya’da serbest avukatlık yapmaktadır.
+        <br><br>
+        Mesleki faaliyetleri kapsamında; danışmanlık hizmeti sunduğu gerçek ve tüzel kişilerin hem önleyici hukuk alanında günlük sorularını yanıtlamakta, hukuki tavsiyeler vermekte, hem de dava ve icra süreçlerini titizlikle yürütmektedir.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hizmetler -->
+<section id="hizmetler">
+  <h2 class="auto-style1">HİZMETLER</h2>
+  <div class="info-section content hizmetler-container">
+    <div class="hizmet">
+      <div class="hizmet-baslik">Hukuki Danışmanlık</div>
+      <p>
+        Hukuki uyuşmazlıkların ortaya çıkmadan önce engellenmesi, müvekkillerin hem zaman hem maliyet açısından korunmasını sağlar. Amaç, olası riskleri önceden tespit ederek müvekkillerin güvenli bir hukuki zeminde hareket etmesini sağlamaktır.
+      </p>
+      <p>
+        Bu kapsamda tüm hukuki konularda yazılı ve sözlü olarak görüş ve bilgi verilmesi, toplantı ve görüşmelere katılım sağlanması, sözleşme süreçlerinde hukuki destek sağlanmasıyla ilgili danışmanlık hizmetleri sunmaktadır.
+      </p>
+      <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+    </div>
+
+    <div class="hizmet">
+      <div class="hizmet-baslik">Dava Takibi</div>
+      <p>
+        Müvekkillerin menfaatlerini korumak adına, uyuşmazlıkların yargı mercilerinde etkin bir şekilde takibi gerçekleştirilmekte; her dava, stratejik planlama, mevzuat analizi ve titiz delil yönetimi ile yürütülmektedir.
+      </p>
+      <p>
+        Dava sürecinin her aşamasında müvekkillere düzenli bilgilendirme yapılmakta ve süreç şeffaf biçimde ilerletilmektedir.
+      </p>
+      <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+    </div>
+
+    <div class="hizmet">
+      <div class="hizmet-baslik">Arabuluculuk</div>
+      <p>
+        Uzun süren dava süreçlerine alternatif olarak geliştirilen arabuluculuk, taraflar arasındaki uyuşmazlıkların kısa sürede ve dostane yollarla çözümlenmesini sağlar.
+      </p>
+      <p>
+        Ayşe Bengül Özdemir Cabar, Adalet Bakanlığı siciline 18571 sicil numarasıyla kayıtlı arabulucu olarak; tarafsız, gizlilik esasına dayalı çözüm süreçleri yürütmektedir.
+      </p>
+      <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Faaliyet Alanları -->
+<section id="faaliyet">
+  <h2>FAALİYET ALANLARI</h2>
+  <div class="faaliyet-container">
+
+    <!-- 1. Satır: 3 sütun -->
+    <div class="faaliyet-sutun">
+      <div class="faaliyet">
+        <div class="faaliyet-baslik">İş Hukuku</div>
+        <p>• İş Sözleşmelerinin ve işyeri kurallarının incelenmesi – düzenlenmesi<br>
+        • İş sözleşmelerinin sonlanmasıyla ilgili belge düzenleme ve müzakereler de dahil olmak üzere süreçlerin yönetilmesi<br>
+        • İşçi-işveren ilişkisinden kaynaklanan her türlü tazminat, alacak ve işe iade davalarının takibi<br>
+        • Sigortasız çalışmalar ile ilgili hizmet tespiti davalarının takibi<br>
+        • İş Kazası ve meslek hastalıklarından kaynaklanan tazminat davaları<br>
+        • İşten çıkış kodunun değiştirilmesi talepli başvuru ve davaların takibi<br>
+        • İş mevzuatına uygunluğun denetlenmesi ve önleyici tedbirler konusunda danışmanlık</p>
+        <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+      </div>
+
+      <div class="faaliyet">
+        <div class="faaliyet-baslik">Kira Hukuku</div>
+        <p>• Kira sözleşmelerinin hazırlanması ve incelenmesi<br>
+        • Tahliye taahhüdüne dayalı tahliye talepli icra takibi ve davalar<br>
+        • Kira alacağı ve tahliye talepli icra takipleri ve davalar<br>
+        • İhtiyaç nedeniyle tahliye davaları<br>
+        • Sözleşmeye aykırılık nedeniyle tahliye talepli davalar<br>
+        • Kira bedelinin tespiti ve uyarlanması talepli davalar</p>
+        <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+      </div>
+
+      <div class="faaliyet">
+        <div class="faaliyet-baslik">Tüketici Hukuku</div>
+        <p>• Ayıplı mal veya hizmetten kaynaklanan hak talepleri<br>
+        • Sözleşmenin feshi, bedel iadesi veya değişim talepleri<br>
+        • Taksitle satış, mesafeli satış ve kapıdan satış uyuşmazlıkları<br>
+        • Garanti, servis ve iade süreçlerine ilişkin ihtilaflar<br>
+        • Haksız şart içeren sözleşmelerin iptali</p>
+        <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+      </div>
+    </div>
+
+    <!-- 2. Satır: 3 sütun -->
+    <div class="faaliyet-sutun">
+      <div class="faaliyet">
+        <div class="faaliyet-baslik">Tazminat ve Sigorta Hukuku</div>
+        <p>• Trafik kazasından kaynaklanan maddi ve manevi tazminat davaları<br>
+        • Değer kaybı talepli başvuru ve davaların takibi<br>
+        • Araç mahrumiyet bedeli talepli başvuru ve davaların takibi<br>
+        • Haksız fiillerden kaynaklanan tazminat davaları<br>
+        • Sözleşmelerden kaynaklanan alacak ve tazminat davaları<br>
+        • İş kazasından kaynaklanan maddi ve manevi tazminat davaları</p>
+        <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+      </div>
+
+      <div class="faaliyet">
+        <div class="faaliyet-baslik">Gayrimenkul Hukuku</div>
+        <p>• Tapu iptali ve tescil davaları<br>
+        • Ortaklığın giderilmesi davaları<br>
+        • Elatmanın önlenmesi davaları<br>
+        • Ecrimisil talepli davalar<br>
+        • Tasarrufun iptali davaları<br>
+        • Tapu işlemleri takibi</p>
+        <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+      </div>
+
+      <div class="faaliyet">
+        <div class="faaliyet-baslik">Miras Hukuku</div>
+        <p>• Mirasçılık belgesinin alınması<br>
+        • Mirasçılık belgesinin iptali davaları<br>
+        • Mirasın reddi davaları<br>
+        • Vasiyetnamenin iptali davaları<br>
+        • Vesayet ve kayyım davaları<br>
+        • Miras hukuku işlemlerine karşı iptal davaları</p>
+        <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+      </div>
+    </div>
+
+    <!-- 3. Satır: 2 sütun -->
+    <div class="faaliyet-sutun">
+      <div class="faaliyet">
+        <div class="faaliyet-baslik">Aile Hukuku</div>
+        <p>• Boşanma davaları<br>
+        • Tanıma ve tenfiz davaları<br>
+        • Aile konutu ve uygulamaları<br>
+        • Katılma Alacağı, Değer Artış Payı, Katkı Payı Alacağı Davaları<br>
+        • Velayet ve nafaka hükümlerine aykırı davranılması halinde başvurulacak kanun yolları</p>
+        <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+      </div>
+
+      <div class="faaliyet">
+        <div class="faaliyet-baslik">Anayasa Mahkemesi Bireysel Başvuru</div>
+        <p>Anayasa Mahkemesine bireysel başvuru, Anayasa ile güvence altına alınan temel hak ve özgürlüklerin ihlal edildiğini düşünen kişilere tanınan özel bir başvuru yoludur. Başvuru yapılmadan önce tüm idari ve yargısal yolların tüketilmiş olması gerekir.</p>
+        <p><a href="#iletisim">Daha fazla bilgi için lütfen iletişime geçiniz.</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Arabuluculuk -->
+<!-- ARABULUCULUK DETAY -->
+<section id="arabuluculuk" class="info-section">
+    <h2>Arabuluculuk</h2>
+    <div class="hizmetler-container">
+        <div class="hizmet">
+            <p>
+                Ayşe Bengül Özdemir Cabar, Adalet Bakanlığı siciline 18571 sicil numarasıyla kayıtlı arabulucu olarak;
+                tarafsız, gizlilik esasına dayalı çözüm süreçleri yürütmektedir.
+            </p>
+            <p>
+                • İş hukukundan doğan uyuşmazlıklar (işçi-işveren ilişkisinden kaynaklanan her türlü tazminat, alacak ve işe iade talepleri)<br>
+                • Ticaret hukukundan doğan uyuşmazlıklar (şirketler arası sözleşme, alacak–borç ilişkileri ve ticari itibarın korunmasına yönelik müzakereler)<br>
+                • Kira uyuşmazlıkları (tahliye, kira bedelinin tespiti)<br>
+                • Kat mülkiyetinden doğan uyuşmazlıklar<br>
+                • Taşınır ve taşınmaz mallarda ortaklığın giderilmesi uyuşmazlıkları
+            </p>
+            <p>
+                Arabuluculuk sürecinde temel ilkemiz; tarafsızlık, gizlilik ve çözüm odaklılık ilkelerinden ödün vermemektir. 
+                Taraflar arasında karşılıklı anlayışın ve iletişimin yeniden kurulmasını sağlayarak, her iki tarafın da menfaatlerini koruyan 
+                kalıcı çözümler üretilmesi amaçlanmaktadır.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim">
+    <h2>İLETİŞİM</h2>
+    <div class="iletisim-container">
+        <!-- Sol Sütun: Form -->
+            <div class="form-sutun">
+      <form id="iletisimForm" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+
+        <label for="ad">Ad Soyad</label>
+        <input type="text" id="ad" name="ad" required>
+
+        <label for="email">E-posta</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mesaj">Mesajınız</label>
+        <textarea id="mesaj" name="mesaj" required></textarea>
+
+        <button type="submit">Gönder</button>
+        <div id="formMesaj" style="margin-top:10px; font-weight:300;"></div>
+      </form>
+    </div>
+
+        <!-- Sağ Sütun: Bilgiler -->
+<div class="bilgi-sutun">
+    <p class="baslik-bold">Ayşe Bengül Özdemir Cabar</p>
+    <p>Avukat & Arabulucu</p>
+    <div class="ayirici"></div>
+    <p class="baslik-bold">Email:</p>
+    <p>aysebengul@gmail.com</p>
+    <p class="baslik-bold">Adres:</p>
+    <p>Etiler Mah. Adnan Menderes Bulvarı Askeroğlu İş Merkezi No:63/504 Muratpaşa Antalya</p>
+
+      <!-- Google Harita -->
+    <div class="harita-container">
+        <iframe 
+            src="https://www.google.com/maps?q=Etiler,+Mevlana+Altgeçidi+No:2005,+07010+Muratpaşa/Antalya&output=embed" 
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div></div></section>
+<!-- Footer Sosyal Linkler -->
+<div class="footer-links">
+<a href="https://www.yargitay.gov.tr" target="_blank" rel="noopener noreferrer"><img alt="" class="auto-style5" height="61" src="logo-yargitay.png" width="46"></a><a href="https://www.tbmm.gov.tr" target="_blank" rel="noopener noreferrer"><img alt="" class="auto-style5" height="59" src="logo-tbmm.png" width="44"></a><a href="https://www.resmigazete.gov.tr" target="_blank" rel="noopener noreferrer"><img alt="" class="auto-style5" height="71" src="logo-resmi-gazete.png" width="44"></a><a href="https://www.danistay.gov.tr" target="_blank" rel="noopener noreferrer"><img alt="" class="auto-style5" height="62" src="logo-danistay.png" width="52"></a><a href="https://www.barobirlik.org.tr" target="_blank" rel="noopener noreferrer"><img alt="" class="auto-style5" height="73" src="logo-barolar-birliği.png" width="46"></a><a href="https://www.adalet.gov.tr" target="_blank" rel="noopener noreferrer"><img alt="" class="auto-style5" height="73" src="logo-adalet-bakanligi.png" width="44"></a><a href="https://www.antalyabarosu.org.tr" target="_blank" rel="noopener noreferrer"><img alt="" class="auto-style5" height="71" src="7.png" width="44"></a></div>
+
+<footer>
+    &copy; 2025 Av. Ayşe Bengül Özdemir Cabar
+</footer>
+
+<!-- JS -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
+
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+    const yOffset = -80;
+    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+});
+
+// Form gönderimi
+const form = document.getElementById("iletisimForm");
+const mesajDiv = document.getElementById("formMesaj");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault(); 
+  const formData = new FormData(form);
+  try {
+    const response = await fetch("/", { method: "POST", body: formData });
+    if (response.ok) {
+      mesajDiv.textContent = "Mesajınız başarıyla gönderildi.";
+      mesajDiv.style.color = "white";
+      form.reset();
+      setTimeout(() => { mesajDiv.textContent = ""; }, 5000);
+    } else {
+      mesajDiv.textContent = "Mesaj gönderilirken bir hata oluştu.";
+      mesajDiv.style.color = "red";
+    }
+  } catch (error) {
+    mesajDiv.textContent = "Mesaj gönderilemedi. Lütfen tekrar deneyin.";
+    mesajDiv.style.color = "red";
+  }
+});
+</script>
+
+</body>
+</html>
