@@ -1,1 +1,19 @@
 
+backend:
+  name: github
+  repo: mcabar/ozdemircabar
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Blog Yazıları"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Yayın Tarihi", name: "date", widget: "datetime" }
+      - { label: "İçerik", name: "body", widget: "markdown" }
